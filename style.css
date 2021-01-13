@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+.header {
+  background-color: #5f37ee;
+  color: #fff;
+}
+.main {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+.aside {
+  background-color: #fff;
+  display: inline-flex;
+  border-right: 1px solid rgb(114, 113, 113);
+  height: 100vh;
+}
+
+.main-section {
+  padding: 1em;
+}
