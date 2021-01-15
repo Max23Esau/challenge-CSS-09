@@ -8,18 +8,26 @@ body {
 .header {
   background-color: #5f37ee;
   color: #fff;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
 }
 .header h1 {
   margin: 0 1em;
 }
 .main {
-  display: grid;
-  grid-template-columns: 7% 93%;
+  /* display: grid;
+  grid-template-columns: 7% 93%; */
 }
 .aside {
   background-color: #fff;
   border-right: 1px solid rgb(114, 113, 113);
   height: 100vh;
+  position: fixed;
+  margin-top: 60px;
 }
 .aside nav {
   text-align: center;
@@ -49,4 +57,78 @@ svg:active {
 
 svg:hover {
   fill: #5f37ee;
+}
+
+/* --- --- CAROUSEL --- --- */
+.contenedor {
+  width: calc(100% - 200px);
+  margin: 0 auto;
+  padding: 5em 0;
+}
+.carousel__contenedor {
+  position: relative;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  top: calc(50% - 15px);
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  background: none;
+  color: #5f37ee;
+  opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+  opacity: 100%;
+}
+
+.carousel__anterior {
+  left: -30px;
+}
+
+.carousel__siguiente {
+  right: -30px;
+}
+
+.carousel__lista {
+  overflow: hidden;
+}
+
+.carousel__elemento {
+  text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #5f37ee;
+  opacity: 0.2;
+  border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+  opacity: 0.5;
+}
+
+.carousel__indicadores .glider-dot.active {
+  opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .contenido-principal {
+    flex-direction: column;
+  }
+
+  .contenido-principal > * {
+    width: 100%;
+  }
 }
